@@ -142,15 +142,15 @@
                             <publisher>
                                 <contextUrl>${contextUrl}</contextUrl>
                                 <snapshotRepoKey>oss-snapshot-local</snapshotRepoKey>
-                                <!--<username>jbaruch</username>-->
-                                <!--<password>\{DESede\}PPP8fe+G4NeQIjwWARqLYw==</password>-->
                                 <username>${env.ARTIFACTORY_USERNAME}</username>
                                 <password>${env.ARTIFACTORY_PASSWORD}</password>
+                            </publisher>
+                            <buildInfo>
                                 <buildUrl>${env.CI_BUILD_URL}</buildUrl>
                                 <buildNumber>${env.CI_BUILD_NUMBER}</buildNumber>
                                 <agentName>${env.CI_NAME}</agentName>
                                 <principal>${env.CI_COMMITTER_USERNAME}</principal>
-                            </publisher>
+                            </buildInfo>
                         </configuration>
                     </execution>
                 </executions>
