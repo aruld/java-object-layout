@@ -142,10 +142,10 @@
                             <publisher>
                                 <contextUrl>${contextUrl}</contextUrl>
                                 <snapshotRepoKey>oss-snapshot-local</snapshotRepoKey>
-                                <username>jbaruch</username>
-                                <password>\{DESede\}PPP8fe+G4NeQIjwWARqLYw==</password>
-                                <!--<username>${env.ARTIFACTORY_USERNAME}</username>-->
-                                <!--<password>${env.ARTIFACTORY_PASSWORD}</password>-->
+                                <!--<username>jbaruch</username>-->
+                                <!--<password>\{DESede\}PPP8fe+G4NeQIjwWARqLYw==</password>-->
+                                <username>${env.ARTIFACTORY_USERNAME}</username>
+                                <password>${env.ARTIFACTORY_PASSWORD}</password>
                             </publisher>
                         </configuration>
                     </execution>
@@ -177,4 +177,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <!--TODO remove once the plugin is on central-->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>goldin-snapshots</id>
+            <name>goldin-plugins-snapshots</name>
+            <url>http://evgenyg.artifactoryonline.com/evgenyg/libs-snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
