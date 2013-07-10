@@ -97,7 +97,7 @@
                     <licenseName>apache_v2</licenseName>
                     <canUpdateCopyright>true</canUpdateCopyright>
                     <canUpdateDescription>true</canUpdateDescription>
-                    <sectionDelimiter> </sectionDelimiter>
+                    <sectionDelimiter></sectionDelimiter>
                     <organizationName>Aleksey Shipilev</organizationName>
                     <inceptionYear>2012</inceptionYear>
                 </configuration>
@@ -124,12 +124,39 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.jfrog.buildinfo</groupId>
+                <artifactId>build-info-extractor-maven3-plugin</artifactId>
+                <version>2.2.x-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>build-info</id>
+                        <goals>
+                            <goal>extract-build-info</goal>
+                        </goals>
+                        <configuration>
+                            <resolver>
+                                <contextUrl>${contextUrl}</contextUrl>
+                                <repoKey>libs-release</repoKey>
+                            </resolver>
+                            <publisher>
+                                <contextUrl>${contextUrl}</contextUrl>
+                                <snapshotRepoKey>oss-snapshot-local</snapshotRepoKey>
+                                <username>jbaruch</username>
+                                <password>\{DESede\}PPP8fe+G4NeQIjwWARqLYw==</password>
+                                <!--<username>${env.ARTIFACTORY_USERNAME}</username>-->
+                                <!--<password>${env.ARTIFACTORY_PASSWORD}</password>-->
+                            </publisher>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <contextUrl>https://oss.jfrog.org</contextUrl>
     </properties>
 
     <dependencies>
