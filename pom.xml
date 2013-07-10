@@ -146,6 +146,7 @@
                                 <!--<password>\{DESede\}PPP8fe+G4NeQIjwWARqLYw==</password>-->
                                 <username>${env.ARTIFACTORY_USERNAME}</username>
                                 <password>${env.ARTIFACTORY_PASSWORD}</password>
+                                <buildUrl>${env.CI_BUILD_URL}</buildUrl>
                             </publisher>
                         </configuration>
                     </execution>
