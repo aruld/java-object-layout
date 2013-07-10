@@ -147,6 +147,9 @@
                                 <username>${env.ARTIFACTORY_USERNAME}</username>
                                 <password>${env.ARTIFACTORY_PASSWORD}</password>
                                 <buildUrl>${env.CI_BUILD_URL}</buildUrl>
+                                <buildNumber>${env.CI_BUILD_NUMBER}</buildNumber>
+                                <agentName>${env.CI_NAME}</agentName>
+                                <principal>${env.CI_COMMITTER_USERNAME}</principal>
                             </publisher>
                         </configuration>
                     </execution>
