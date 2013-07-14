@@ -160,7 +160,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <contextUrl>https://oss.jfrog.org</contextUrl>
+        <contextUrl>https://oss.jfrog.info</contextUrl>
     </properties>
 
     <dependencies>
