@@ -149,7 +149,7 @@
                                 <buildUrl>{CI_BUILD_URL|BUILD_URL}</buildUrl>
                                 <buildNumber>{CI_BUILD_NUMBER|BUILD_NUMBER}</buildNumber>
                                 <agentName>{CI_NAME|Jenkins}</agentName>
-                                <principal>{CI_COMMITTER_USERNAME|anonymous}</principal>
+                                <principal>{CI_COMMITTER_USERNAME|ARTIFACTORY_USERNAME}</principal>
                             </buildInfo>
                         </configuration>
                     </execution>
