@@ -136,20 +136,20 @@
                         </goals>
                         <configuration>
                             <resolver>
-                                <contextUrl>${env.ARTIFACTORY_CONTEXT_URL}</contextUrl>
+                                <contextUrl>{ARTIFACTORY_CONTEXT_URL}</contextUrl>
                                 <repoKey>libs-release</repoKey>
                             </resolver>
                             <publisher>
-                                <contextUrl>${env.ARTIFACTORY_CONTEXT_URL}</contextUrl>
+                                <contextUrl>{ARTIFACTORY_CONTEXT_URL}</contextUrl>
                                 <snapshotRepoKey>oss-snapshot-local</snapshotRepoKey>
-                                <username>${env.ARTIFACTORY_USERNAME}</username>
-                                <password>${env.ARTIFACTORY_PASSWORD}</password>
+                                <username>{ARTIFACTORY_USERNAME}</username>
+                                <password>{ARTIFACTORY_PASSWORD}</password>
                             </publisher>
                             <buildInfo>
-                                <buildUrl>${env.CI_BUILD_URL}</buildUrl>
-                                <buildNumber>${env.CI_BUILD_NUMBER}</buildNumber>
-                                <agentName>${env.CI_NAME}</agentName>
-                                <principal>${env.CI_COMMITTER_USERNAME}</principal>
+                                <buildUrl>{CI_BUILD_URL|BUILD_URL}</buildUrl>
+                                <buildNumber>{CI_BUILD_NUMBER|BUILD_NUMBER}</buildNumber>
+                                <agentName>{CI_NAME|Jenkins}</agentName>
+                                <principal>{CI_COMMITTER_USERNAME|anonymous}</principal>
                             </buildInfo>
                         </configuration>
                     </execution>
