@@ -1,5 +1,5 @@
 Java Object Layout Dumpers
----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 These are the very tiny tools to analyze object layout schemes in JVMs.
 These tools are using Unsafe heavily to deduce the *actual* object
