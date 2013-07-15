@@ -136,11 +136,11 @@
                         </goals>
                         <configuration>
                             <resolver>
-                                <contextUrl>{ARTIFACTORY_CONTEXT_URL}</contextUrl>
+                                <contextUrl>${env.ARTIFACTORY_CONTEXT_URL}</contextUrl>
                                 <repoKey>libs-release</repoKey>
                             </resolver>
                             <publisher>
-                                <contextUrl>{ARTIFACTORY_CONTEXT_URL}</contextUrl>
+                                <contextUrl>${env.ARTIFACTORY_CONTEXT_URL}</contextUrl>
                                 <snapshotRepoKey>oss-snapshot-local</snapshotRepoKey>
                                 <username>{ARTIFACTORY_USERNAME}</username>
                                 <password>{ARTIFACTORY_PASSWORD}</password>
