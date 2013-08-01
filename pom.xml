@@ -135,10 +135,6 @@
                             <goal>extract-build-info</goal>
                         </goals>
                         <configuration>
-                            <resolver>
-                                <contextUrl>{ARTIFACTORY_CONTEXT_URL}</contextUrl>
-                                <repoKey>libs-release</repoKey>
-                            </resolver>
                             <publisher>
                                 <contextUrl>{ARTIFACTORY_CONTEXT_URL}</contextUrl>
                                 <snapshotRepoKey>oss-snapshot-local</snapshotRepoKey>
