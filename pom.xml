@@ -126,13 +126,13 @@
             </plugin>
             <plugin>
                 <groupId>org.jfrog.buildinfo</groupId>
-                <artifactId>build-info-extractor-maven3-plugin</artifactId>
+                <artifactId>artifactory-maven-plugin</artifactId>
                 <version>2.2.x-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <id>build-info</id>
                         <goals>
-                            <goal>extract-build-info</goal>
+                            <goal>publish</goal>
                         </goals>
                         <configuration>
                             <publisher>
@@ -144,7 +144,7 @@
                             <buildInfo>
                                 <buildUrl>{CI_BUILD_URL|BUILD_URL}</buildUrl>
                                 <buildNumber>{CI_BUILD_NUMBER|BUILD_NUMBER}</buildNumber>
-                                <agentName>{CI_NAME|Jenkins}</agentName>
+                                <agentName>{CI_NAME|"Jenkins"}</agentName>
                                 <principal>{CI_COMMITTER_USERNAME|ARTIFACTORY_USERNAME}</principal>
                             </buildInfo>
                         </configuration>
