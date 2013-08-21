@@ -136,16 +136,16 @@
                         </goals>
                         <configuration>
                             <publisher>
-                                <contextUrl>{ARTIFACTORY_CONTEXT_URL}</contextUrl>
+                                <contextUrl>{{ARTIFACTORY_CONTEXT_URL}}</contextUrl>
                                 <snapshotRepoKey>oss-snapshot-local</snapshotRepoKey>
-                                <username>{ARTIFACTORY_USERNAME}</username>
-                                <password>{ARTIFACTORY_PASSWORD}</password>
+                                <username>{{ARTIFACTORY_USERNAME}}</username>
+                                <password>{{ARTIFACTORY_PASSWORD}}</password>
                             </publisher>
                             <buildInfo>
-                                <buildUrl>{CI_BUILD_URL|BUILD_URL}</buildUrl>
-                                <buildNumber>{CI_BUILD_NUMBER|BUILD_NUMBER}</buildNumber>
-                                <agentName>{CI_NAME|"Jenkins"}</agentName>
-                                <principal>{CI_COMMITTER_USERNAME|ARTIFACTORY_USERNAME}</principal>
+                                <buildUrl>{CI_BUILD_URL|BUILD_URL}}</buildUrl>
+                                <buildNumber>{{CI_BUILD_NUMBER|BUILD_NUMBER}}</buildNumber>
+                                <agentName>{{CI_NAME|"Jenkins"}}</agentName>
+                                <principal>{{CI_COMMITTER_USERNAME|ARTIFACTORY_USERNAME}}</principal>
                             </buildInfo>
                         </configuration>
                     </execution>
