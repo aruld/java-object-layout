@@ -127,7 +127,7 @@
             <plugin>
                 <groupId>org.jfrog.buildinfo</groupId>
                 <artifactId>artifactory-maven-plugin</artifactId>
-                <version>2.2.x-SNAPSHOT</version>
+                <version>2.2.1</version>
                 <executions>
                     <execution>
                         <id>build-info</id>
@@ -176,12 +176,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <!--TODO remove once the plugin is on central-->
-    <pluginRepositories>
-        <pluginRepository>
-            <id>goldin-snapshots</id>
-            <name>goldin-plugins-snapshots</name>
-            <url>http://evgenyg.artifactoryonline.com/evgenyg/libs-snapshots</url>
-        </pluginRepository>
-    </pluginRepositories>
 </project>
